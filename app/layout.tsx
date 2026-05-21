@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 
-const BASE = '/gym-buddies-lp';
+const BASE = '';
 
 export const metadata: Metadata = {
   title: 'Gym Buddies — Train Together. Grow Stronger.',

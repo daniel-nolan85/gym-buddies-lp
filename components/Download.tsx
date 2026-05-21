@@ -2,10 +2,36 @@
 
 import { motion } from 'framer-motion';
 import FadeIn from './FadeIn';
+import { useState } from 'react';
 
-const BASE = '/gym-buddies-lp';
+const BASE = '';
 
 export default function Download() {
+  const [email, setEmail] = useState('');
+  const [waitlistStatus, setWaitlistStatus] = useState<
+    'idle' | 'sending' | 'done' | 'error'
+  >('idle');
+
+  const handleWaitlist = async () => {
+    if (!email) return;
+    setWaitlistStatus('sending');
+    try {
+      const res = await fetch(
+        'https://gym-buddies-e61la.sevalla.app/api/email/waitlist',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email }),
+        },
+      );
+      if (!res.ok) throw new Error('Failed');
+      setWaitlistStatus('done');
+      setEmail('');
+    } catch {
+      setWaitlistStatus('error');
+    }
+  };
+
   return (
     <section
       id='download'
@@ -174,63 +200,99 @@ export default function Download() {
 
         {/* Waitlist form */}
         <FadeIn delay={200}>
-          <div style={{ maxWidth: '480px', margin: '0 auto' }}>
-            <p
-              style={{
-                fontSize: '0.85rem',
-                color: 'var(--text-muted)',
-                marginBottom: '1rem',
-                fontFamily: 'var(--font-mono)',
-                letterSpacing: '0.05em',
-              }}
-            >
-              GET NOTIFIED AT LAUNCH
-            </p>
-            <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
-              <input
-                type='email'
-                placeholder='your@email.com'
+          {waitlistStatus === 'done' ? (
+            <div style={{ textAlign: 'center', padding: '1rem 0' }}>
+              <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🎉</div>
+              <p
                 style={{
-                  flex: 1,
-                  minWidth: '200px',
-                  background: 'rgba(255,255,255,0.04)',
-                  border: '1px solid rgba(255,255,255,0.1)',
-                  borderRadius: '12px',
-                  padding: '0.875rem 1.25rem',
-                  color: 'var(--text-primary)',
-                  fontSize: '0.9rem',
-                  outline: 'none',
-                  fontFamily: 'var(--font-body)',
-                  transition: 'border-color 0.2s',
+                  color: 'var(--teal)',
+                  fontWeight: 600,
+                  fontSize: '0.95rem',
                 }}
-                onFocus={(e) =>
-                  (e.currentTarget.style.borderColor = 'var(--teal)')
-                }
-                onBlur={(e) =>
-                  (e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)')
-                }
-              />
-              <motion.button
-                whileHover={{
-                  y: -2,
-                  boxShadow: '0 0 20px rgba(45,212,191,0.3)',
-                }}
-                className='btn-primary'
-                style={{ flexShrink: 0 }}
               >
-                Notify me
-              </motion.button>
+                You're on the list! We'll be in touch when we launch.
+              </p>
             </div>
-            <p
-              style={{
-                fontSize: '0.75rem',
-                color: 'var(--text-muted)',
-                marginTop: '0.75rem',
-              }}
-            >
-              No spam, ever. Just a heads up when we launch. 🚀
-            </p>
-          </div>
+          ) : (
+            <div style={{ maxWidth: '480px', margin: '0 auto' }}>
+              <p
+                style={{
+                  fontSize: '0.85rem',
+                  color: 'var(--text-muted)',
+                  marginBottom: '1rem',
+                  fontFamily: 'var(--font-mono)',
+                  letterSpacing: '0.05em',
+                }}
+              >
+                GET NOTIFIED AT LAUNCH
+              </p>
+              <div
+                style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}
+              >
+                <input
+                  type='email'
+                  placeholder='your@email.com'
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  style={{
+                    flex: 1,
+                    minWidth: '200px',
+                    background: 'rgba(255,255,255,0.04)',
+                    border: '1px solid rgba(255,255,255,0.1)',
+                    borderRadius: '12px',
+                    padding: '0.875rem 1.25rem',
+                    color: 'var(--text-primary)',
+                    fontSize: '0.9rem',
+                    outline: 'none',
+                    fontFamily: 'var(--font-body)',
+                    transition: 'border-color 0.2s',
+                  }}
+                  onFocus={(e) =>
+                    (e.currentTarget.style.borderColor = 'var(--teal)')
+                  }
+                  onBlur={(e) =>
+                    (e.currentTarget.style.borderColor =
+                      'rgba(255,255,255,0.1)')
+                  }
+                />
+                <motion.button
+                  whileHover={{
+                    y: -2,
+                    boxShadow: '0 0 20px rgba(45,212,191,0.3)',
+                  }}
+                  className='btn-primary'
+                  onClick={handleWaitlist}
+                  disabled={waitlistStatus === 'sending' || !email}
+                  style={{
+                    flexShrink: 0,
+                    opacity: waitlistStatus === 'sending' ? 0.7 : 1,
+                  }}
+                >
+                  {waitlistStatus === 'sending' ? 'Joining...' : 'Notify me'}
+                </motion.button>
+              </div>
+              {waitlistStatus === 'error' && (
+                <p
+                  style={{
+                    color: '#F87171',
+                    fontSize: '0.8rem',
+                    marginTop: '0.75rem',
+                  }}
+                >
+                  Something went wrong. Please try again.
+                </p>
+              )}
+              <p
+                style={{
+                  fontSize: '0.75rem',
+                  color: 'var(--text-muted)',
+                  marginTop: '0.75rem',
+                }}
+              >
+                No spam, ever. Just a heads up when we launch. 🚀
+              </p>
+            </div>
+          )}
         </FadeIn>
       </div>
     </section>

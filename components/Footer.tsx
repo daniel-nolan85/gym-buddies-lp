@@ -1,8 +1,10 @@
 'use client';
 
-const BASE = '/gym-buddies-lp';
+const BASE = '';
 
 export default function Footer() {
+  const isMobile = window.innerWidth <= 768;
+
   return (
     <footer
       style={{
@@ -28,7 +30,11 @@ export default function Footer() {
             <img
               src={`${BASE}/img/logo-long.png`}
               alt='Gym Buddies'
-              style={{ height: '40px', width: 'auto', marginBottom: '0.5rem' }}
+              style={{
+                height: isMobile ? '70px' : '80px',
+                width: 'auto',
+                margin: '0 0 0.5rem 10px',
+              }}
             />
             <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>
               Train together. Grow stronger.

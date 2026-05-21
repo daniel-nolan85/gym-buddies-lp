@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 
-const BASE = '/gym-buddies-lp';
+const BASE = '';
 
 // Mini social feed mockup screen content
 function FeedScreen() {

@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
+import LegalNav from '@/components/LegalNav';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy — Gym Buddies',
   description: 'Privacy Policy for the Gym Buddies mobile application.',
 };
 
-const BASE = '/gym-buddies-lp';
+const BASE = '';
 
 const Section = ({
   title,
@@ -63,48 +64,7 @@ export default function PrivacyPolicy() {
         fontFamily: 'var(--font-body)',
       }}
     >
-      {/* Nav */}
-      <nav
-        style={{
-          borderBottom: '1px solid rgba(255,255,255,0.06)',
-          padding: '1rem 0',
-          background: 'rgba(8,6,15,0.9)',
-          backdropFilter: 'blur(20px)',
-          position: 'sticky',
-          top: 0,
-          zIndex: 50,
-        }}
-      >
-        <div
-          className='container'
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-          }}
-        >
-          <a href={BASE} style={{ textDecoration: 'none' }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={`${BASE}/img/logo-long.png`}
-              alt='Gym Buddies'
-              style={{ height: '28px', width: 'auto' }}
-            />
-          </a>
-          <a
-            href={BASE}
-            className='back-link'
-            style={{
-              fontSize: '0.85rem',
-              color: 'var(--text-muted)',
-              textDecoration: 'none',
-              fontFamily: 'var(--font-mono)',
-            }}
-          >
-            ← Back to app
-          </a>
-        </div>
-      </nav>
+      <LegalNav />
 
       <div
         className='container'

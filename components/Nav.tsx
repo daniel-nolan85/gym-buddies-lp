@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const BASE = '/gym-buddies-lp';
+const BASE = '';
 
 const navLinks = [
   { label: 'Features', href: '#features' },
@@ -30,6 +30,8 @@ export default function Nav() {
     };
   }, [menuOpen]);
 
+  const isMobile = window.innerWidth <= 768;
+
   return (
     <>
       <nav
@@ -52,7 +54,7 @@ export default function Nav() {
           style={{
             maxWidth: '1200px',
             margin: '0 auto',
-            padding: '1rem 1.5rem',
+            padding: '0 1.5rem',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
@@ -70,8 +72,10 @@ export default function Nav() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={`${BASE}/img/logo-long.png`}
-              alt='Gym Buddies'
-              style={{ height: '44px', width: 'auto' }}
+              style={{
+                height: isMobile ? '80px' : '120px',
+                width: 'auto',
+              }}
             />
           </a>
 
