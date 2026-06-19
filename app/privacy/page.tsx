@@ -154,7 +154,27 @@ export default function PrivacyPolicy() {
               'Push notification token: to deliver notifications to your device',
             ]}
           />
-
+          <P>
+            <strong style={{ color: 'var(--text-primary)' }}>
+              Health and fitness data:
+            </strong>
+          </P>
+          <UL
+            items={[
+              'Workout history, exercise logs, sets, reps, weights, and personal records',
+              'Nutrition logs including food entries, calorie counts, and macro breakdowns (protein, carbs, fats, water intake)',
+              'Fitness goals, fitness level, and body-related preferences you provide',
+              'Streak data, achievement history, and progress milestones',
+            ]}
+          />
+          <P>
+            Health and fitness data you provide is stored securely and is used
+            solely to operate the App's features. It is not sold or shared with
+            third parties except as strictly necessary to provide the service
+            (for example, storing data on MongoDB Atlas). You can delete your
+            health and fitness data at any time by deleting your account from
+            within the App.
+          </P>
           <P>
             <strong style={{ color: 'var(--text-primary)' }}>
               Information collected automatically:

@@ -30,8 +30,6 @@ export default function Nav() {
     };
   }, [menuOpen]);
 
-  const isMobile = window.innerWidth <= 768;
-
   return (
     <>
       <nav
@@ -72,9 +70,12 @@ export default function Nav() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={`${BASE}/img/logo-long.png`}
+              alt='Gym Buddies'
+              id='nav-logo'
               style={{
-                height: isMobile ? '80px' : '120px',
+                height: '120px',
                 width: 'auto',
+                marginLeft: '-8px',
               }}
             />
           </a>
@@ -221,6 +222,7 @@ export default function Nav() {
         @media (max-width: 768px) {
           #desktop-nav { display: none !important; }
           #hamburger-btn { display: flex !important; }
+          #nav-logo { height: 80px !important; }
         }
       `}</style>
     </>

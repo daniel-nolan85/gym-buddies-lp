@@ -3,8 +3,6 @@
 const BASE = '';
 
 export default function Footer() {
-  const isMobile = window.innerWidth <= 768;
-
   return (
     <footer
       style={{
@@ -30,10 +28,11 @@ export default function Footer() {
             <img
               src={`${BASE}/img/logo-long.png`}
               alt='Gym Buddies'
+              id='footer-logo'
               style={{
-                height: isMobile ? '70px' : '80px',
+                height: '80px',
                 width: 'auto',
-                margin: '0 0 0.5rem 10px',
+                margin: '0 0 0.5rem -6px',
               }}
             />
             <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>
@@ -48,10 +47,6 @@ export default function Footer() {
               { label: 'Download', href: '#download' },
               { label: 'Privacy Policy', href: `${BASE}/privacy` },
               { label: 'Terms of Service', href: `${BASE}/terms` },
-              {
-                label: 'Support',
-                href: 'mailto:support@gymbuddies.nolancode.com',
-              },
             ].map((link) => (
               <a
                 key={link.label}
@@ -108,6 +103,11 @@ export default function Footer() {
           </p>
         </div>
       </div>
+      <style>{`
+        @media (max-width: 768px) {
+          #footer-logo { height: 70px !important; }
+        }
+      `}</style>
     </footer>
   );
 }
