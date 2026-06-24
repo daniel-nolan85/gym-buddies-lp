@@ -45,6 +45,10 @@ export default function Footer() {
             {[
               { label: 'Features', href: '#features' },
               { label: 'Download', href: '#download' },
+              {
+                label: 'Community Guidelines',
+                href: `${BASE}/community-guidelines`,
+              },
               { label: 'Privacy Policy', href: `${BASE}/privacy` },
               { label: 'Terms of Service', href: `${BASE}/terms` },
             ].map((link) => (
