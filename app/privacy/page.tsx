@@ -147,6 +147,7 @@ export default function PrivacyPolicy() {
               'Plan data: workout plans and diet plans you create or save, including AI-generated plans',
               'Achievement and streak data: earned badges, milestone progress, and workout streak history',
               'Push notification token: to deliver notifications to your device',
+              'Date of birth: collected once during account setup to verify you meet the minimum age requirement of 18 years. This is stored securely and is not shared with third parties.',
             ]}
           />
           <P>
@@ -260,9 +261,11 @@ export default function PrivacyPolicy() {
           </P>
           <P>
             We retain your personal data for as long as your account is active
-            or as needed to provide services. If you delete your account, we
-            will delete or anonymise your personal data within 30 days, except
-            where we are required to retain it for legal compliance purposes.
+            or as needed to provide services. If you delete your account, your
+            profile and content will be immediately hidden from other users.
+            Your data is retained to allow account reactivation at any time. To
+            request permanent deletion of your data, contact us at
+            support@gymbuddies.nolancode.com.
           </P>
         </Section>
 
@@ -286,20 +289,14 @@ export default function PrivacyPolicy() {
           </P>
         </Section>
 
-        <Section title="7. Children's Privacy">
+        <Section title='7. Minimum Age Requirement'>
           <P>
-            Gym Buddies is not directed to children under the age of 13, and we
-            do not knowingly collect personal information from children under
-            13. If you are a parent or guardian and believe your child under 13
-            has provided us with personal information, please contact us
-            immediately at support@gymbuddies.nolancode.com. If we become aware
-            that we have collected personal information from a child under 13
-            without parental consent, we will take steps to remove that
-            information.
-          </P>
-          <P>
-            Users between the ages of 13 and 17 should obtain parental consent
-            before using the App.
+            Gym Buddies is not directed to children under the age of 18, and we
+            do not knowingly collect personal information from anyone under 18.
+            If you are a parent or guardian and believe your child has provided
+            us with personal information, please contact us immediately at
+            support@gymbuddies.nolancode.com and we will take steps to remove
+            that information.
           </P>
         </Section>
 
@@ -336,7 +333,11 @@ export default function PrivacyPolicy() {
               Account Deletion:
             </strong>{' '}
             You can delete your account from within the App settings. Upon
-            deletion, your profile, posts, and personal data will be removed
+            deletion, your profile and content will be immediately hidden from
+            other users. Your data is retained to allow you to reactivate your
+            account at any time. If you wish to have your data permanently and
+            irreversibly deleted, please contact us at
+            support@gymbuddies.nolancode.com and we will process your request
             within 30 days.
           </P>
         </Section>
