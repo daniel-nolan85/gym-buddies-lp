@@ -103,12 +103,7 @@ export default function PrivacyPolicy() {
               fontFamily: 'var(--font-mono)',
             }}
           >
-            Last updated:{' '}
-            {new Date().toLocaleDateString('en-US', {
-              month: 'long',
-              day: 'numeric',
-              year: 'numeric',
-            })}
+            Last updated: June 24, 2026
           </p>
         </div>
 
@@ -154,6 +149,20 @@ export default function PrivacyPolicy() {
               'Push notification token: to deliver notifications to your device',
             ]}
           />
+          <P>
+            <strong style={{ color: 'var(--text-primary)' }}>
+              Voice recordings:
+            </strong>{' '}
+            When you record and send voice messages in chat, or leave voice
+            comments on posts, plans, or profile images, the audio recording is
+            captured, uploaded, and stored on Cloudinary's secure servers. Voice
+            recordings are user-initiated — the App only records when you
+            actively hold the record button. Recordings are stored as part of
+            your content and are subject to the same retention and deletion
+            rules as other media you upload. You can delete individual voice
+            recordings at any time by deleting the message or comment containing
+            them, or by deleting your account.
+          </P>
           <P>
             <strong style={{ color: 'var(--text-primary)' }}>
               Health and fitness data:
@@ -206,6 +215,7 @@ export default function PrivacyPolicy() {
               'Respond to your support requests and communications',
               'Enforce our Terms of Service and community guidelines',
               'Comply with applicable laws and regulations',
+              'Store and deliver voice recordings you create within the App via Cloudinary secure cloud storage',
             ]}
           />
         </Section>
@@ -223,7 +233,7 @@ export default function PrivacyPolicy() {
               'Inngest (inngest.com) — Background job processing for features such as AI plan generation and notifications',
               'Sevalla — Application hosting and infrastructure provider',
               'Expo (expo.dev) — Mobile app framework and push notification delivery (via Expo Push Notification Service)',
-              'OpenAI / Anthropic — AI services used to generate personalised workout and diet plans. Plan prompts and your fitness preferences are sent to these services; no personally identifiable information beyond fitness goals and preferences is transmitted',
+              'OpenAI (openai.com) — AI services used to generate personalised workout and diet plans, global and personal challenges, motivational content, and nutrition estimates. Your fitness preferences, goals, and food log queries are sent to OpenAI for processing; no personally identifiable information beyond these inputs is transmitted. View their privacy policy at openai.com/policies/privacy-policy',
             ]}
           />
           <P>
