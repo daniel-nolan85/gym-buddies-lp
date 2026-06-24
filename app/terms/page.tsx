@@ -11,11 +11,13 @@ const BASE = '';
 const Section = ({
   title,
   children,
+  id,
 }: {
   title: string;
   children: React.ReactNode;
+  id?: string;
 }) => (
-  <div style={{ marginBottom: '2.5rem' }}>
+  <div id={id} style={{ marginBottom: '2.5rem' }}>
     <h2
       style={{
         fontFamily: 'var(--font-display)',
@@ -256,7 +258,7 @@ export default function TermsOfService() {
           </P>
         </Section>
 
-        <Section title='7. Community Guidelines'>
+        <Section title='7. Community Guidelines' id='community-guidelines'>
           <P>Gym Buddies is a fitness community. We expect all users to:</P>
           <UL
             items={[
