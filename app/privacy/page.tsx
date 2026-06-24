@@ -234,6 +234,8 @@ export default function PrivacyPolicy() {
               'Sevalla — Application hosting and infrastructure provider',
               'Expo (expo.dev) — Mobile app framework and push notification delivery (via Expo Push Notification Service)',
               'OpenAI (openai.com) — AI services used to generate personalised workout and diet plans, global and personal challenges, motivational content, and nutrition estimates. Your fitness preferences, goals, and food log queries are sent to OpenAI for processing; no personally identifiable information beyond these inputs is transmitted. View their privacy policy at openai.com/policies/privacy-policy',
+              'Sentry (sentry.io) — Error tracking and performance monitoring. Sentry may receive device information, IP addresses, and error context data when errors occur within the App. View their privacy policy at sentry.io/privacy',
+              'Resend (resend.com) — Transactional email delivery for system notifications and alerts. View their privacy policy at resend.com/privacy',
             ]}
           />
           <P>

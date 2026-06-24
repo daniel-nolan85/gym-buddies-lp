@@ -274,6 +274,16 @@ export default function TermsOfService() {
             issue warnings, suspend, or permanently ban users who violate our
             community guidelines.
           </P>
+          <P>
+            For the full version of our Community Guidelines, visit{' '}
+            <a
+              href={`${BASE}/community-guidelines`}
+              style={{ color: 'var(--teal)', textDecoration: 'none' }}
+            >
+              gymbuddies.nolancode.com/community-guidelines
+            </a>
+            .
+          </P>
         </Section>
 
         <Section title='8. AI-Generated Content'>
