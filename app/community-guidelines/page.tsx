@@ -257,10 +257,10 @@ export default function CommunityGuidelines() {
               <br />
               Email:{' '}
               <a
-                href='mailto:support@gymbuddies.nolancode.com'
+                href='mailto:support@nolancode.com'
                 style={{ color: 'var(--teal)', textDecoration: 'none' }}
               >
-                support@gymbuddies.nolancode.com
+                support@nolancode.com
               </a>
               <br />
               Henderson, Nevada, United States

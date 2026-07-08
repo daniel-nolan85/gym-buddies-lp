@@ -157,7 +157,7 @@ export default function TermsOfService() {
               'Maintain and promptly update your account information',
               'Keep your account credentials secure and confidential',
               'Accept responsibility for all activities that occur under your account',
-              'Notify us immediately of any unauthorised use of your account at support@gymbuddies.nolancode.com',
+              'Notify us immediately of any unauthorised use of your account at support@nolancode.com',
             ]}
           />
           <P>
@@ -504,10 +504,10 @@ export default function TermsOfService() {
               <br />
               Email:{' '}
               <a
-                href='mailto:support@gymbuddies.nolancode.com'
+                href='mailto:support@nolancode.com'
                 style={{ color: 'var(--teal)', textDecoration: 'none' }}
               >
-                support@gymbuddies.nolancode.com
+                support@nolancode.com
               </a>
               <br />
               Henderson, Nevada, United States

@@ -125,7 +125,7 @@ export default function PrivacyPolicy() {
             right to privacy. If you have any questions or concerns about this
             policy or our practices, please contact us at{' '}
             <strong style={{ color: 'var(--teal)' }}>
-              support@gymbuddies.nolancode.com
+              support@nolancode.com
             </strong>
             .
           </P>
@@ -265,7 +265,7 @@ export default function PrivacyPolicy() {
             profile and content will be immediately hidden from other users.
             Your data is retained to allow account reactivation at any time. To
             request permanent deletion of your data, contact us at
-            support@gymbuddies.nolancode.com.
+            support@nolancode.com.
           </P>
         </Section>
 
@@ -295,8 +295,8 @@ export default function PrivacyPolicy() {
             do not knowingly collect personal information from anyone under 18.
             If you are a parent or guardian and believe your child has provided
             us with personal information, please contact us immediately at
-            support@gymbuddies.nolancode.com and we will take steps to remove
-            that information.
+            support@nolancode.com and we will take steps to remove that
+            information.
           </P>
         </Section>
 
@@ -318,8 +318,8 @@ export default function PrivacyPolicy() {
           <P>
             You can manage most of your data directly within the App. To request
             account deletion or exercise other rights, contact us at
-            support@gymbuddies.nolancode.com. We will respond to your request
-            within 30 days.
+            support@nolancode.com. We will respond to your request within 30
+            days.
           </P>
           <P>
             <strong style={{ color: 'var(--text-primary)' }}>
@@ -336,9 +336,8 @@ export default function PrivacyPolicy() {
             deletion, your profile and content will be immediately hidden from
             other users. Your data is retained to allow you to reactivate your
             account at any time. If you wish to have your data permanently and
-            irreversibly deleted, please contact us at
-            support@gymbuddies.nolancode.com and we will process your request
-            within 30 days.
+            irreversibly deleted, please contact us at support@nolancode.com and
+            we will process your request within 30 days.
           </P>
         </Section>
 
@@ -357,7 +356,7 @@ export default function PrivacyPolicy() {
           />
           <P>
             To exercise your California privacy rights, contact us at
-            support@gymbuddies.nolancode.com.
+            support@nolancode.com.
           </P>
         </Section>
 
@@ -423,10 +422,10 @@ export default function PrivacyPolicy() {
               <br />
               Email:{' '}
               <a
-                href='mailto:support@gymbuddies.nolancode.com'
+                href='mailto:support@nolancode.com'
                 style={{ color: 'var(--teal)', textDecoration: 'none' }}
               >
-                support@gymbuddies.nolancode.com
+                support@nolancode.com
               </a>
               <br />
               Henderson, Nevada, United States
