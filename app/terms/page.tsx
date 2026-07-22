@@ -105,7 +105,7 @@ export default function TermsOfService() {
               fontFamily: 'var(--font-mono)',
             }}
           >
-            Last updated: June 24, 2026
+            Last updated: July 21, 2026
           </p>
         </div>
 
@@ -409,6 +409,10 @@ export default function TermsOfService() {
             healthcare provider before starting a new fitness or nutrition
             programme. Never disregard professional medical advice or delay
             seeking it because of something you read or generated in this App.
+          </P>
+          <P>
+            This App is not intended to diagnose, treat, cure, or prevent any
+            disease, and is not a substitute for medical care.
           </P>
         </Section>
 

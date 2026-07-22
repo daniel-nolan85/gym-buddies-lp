@@ -103,7 +103,7 @@ export default function PrivacyPolicy() {
               fontFamily: 'var(--font-mono)',
             }}
           >
-            Last updated: June 24, 2026
+            Last updated: July 21, 2026
           </p>
         </div>
 
