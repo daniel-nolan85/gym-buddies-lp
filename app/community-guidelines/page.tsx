@@ -103,7 +103,7 @@ export default function CommunityGuidelines() {
               fontFamily: 'var(--font-mono)',
             }}
           >
-            Last updated: July 21, 2026
+            Last updated: September 1, 2026
           </p>
         </div>
 
@@ -225,6 +225,12 @@ export default function CommunityGuidelines() {
             taken will depend on the nature and frequency of the violation.
             Nolancode reserves the right to take any action we deem appropriate
             in our sole discretion.
+          </P>
+          <P>
+            In addition to reporting, you can mute or block another member at
+            any time from their profile or from any of their posts, comments, or
+            messages. Blocking prevents both accounts from seeing each other's
+            content or messaging one another.
           </P>
         </Section>
 

@@ -105,7 +105,7 @@ export default function TermsOfService() {
               fontFamily: 'var(--font-mono)',
             }}
           >
-            Last updated: July 21, 2026
+            Last updated: September 1, 2026
           </p>
         </div>
 

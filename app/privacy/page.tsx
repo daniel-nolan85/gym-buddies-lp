@@ -103,7 +103,7 @@ export default function PrivacyPolicy() {
               fontFamily: 'var(--font-mono)',
             }}
           >
-            Last updated: July 21, 2026
+            Last updated: September 1, 2026
           </p>
         </div>
 
@@ -148,6 +148,7 @@ export default function PrivacyPolicy() {
               'Achievement and streak data: earned badges, milestone progress, and workout streak history',
               'Push notification token: to deliver notifications to your device',
               'Date of birth: collected once during account setup to verify you meet the minimum age requirement of 18 years. This is stored securely and is not shared with third parties.',
+              'Coach verification information (optional): if you apply for Verified Coach status, we collect your credential type, issuing organization, certification number, a short bio, and a document you upload to verify your qualifications.',
             ]}
           />
           <P>
@@ -261,11 +262,16 @@ export default function PrivacyPolicy() {
           </P>
           <P>
             We retain your personal data for as long as your account is active
-            or as needed to provide services. If you delete your account, your
-            profile and content will be immediately hidden from other users.
-            Your data is retained to allow account reactivation at any time. To
-            request permanent deletion of your data, contact us at
-            support@nolancode.com.
+            or as needed to provide services. The App offers two account removal
+            options, both available from Profile → Privacy & Security:
+            Deactivate Account, which immediately hides your profile and content
+            from other users while keeping your data intact so you can
+            reactivate at any time by signing back in; and Delete Account
+            Permanently, which immediately and irreversibly deletes your
+            account, removes your personal information, and anonymizes your
+            existing posts, comments, and messages (shown as "Deleted User") so
+            conversations and community content remain intact for other users.
+            Permanent deletion does not require contacting support.
           </P>
         </Section>
 
@@ -316,8 +322,8 @@ export default function PrivacyPolicy() {
             ]}
           />
           <P>
-            You can manage most of your data directly within the App. To request
-            account deletion or exercise other rights, contact us at
+            You can manage most of your data, including account deletion,
+            directly within the App. To exercise other rights, contact us at
             support@nolancode.com. We will respond to your request within 30
             days.
           </P>
@@ -332,12 +338,13 @@ export default function PrivacyPolicy() {
             <strong style={{ color: 'var(--text-primary)' }}>
               Account Deletion:
             </strong>{' '}
-            You can delete your account from within the App settings. Upon
-            deletion, your profile and content will be immediately hidden from
-            other users. Your data is retained to allow you to reactivate your
-            account at any time. If you wish to have your data permanently and
-            irreversibly deleted, please contact us at support@nolancode.com and
-            we will process your request within 30 days.
+            The App provides two options from Profile → Privacy & Security.
+            Deactivate Account immediately hides your profile and content from
+            other users while retaining your data so you can reactivate at any
+            time. Delete Account Permanently immediately and irreversibly
+            deletes your account, strips your personal information, and
+            anonymizes your existing content — this is self-service, requires no
+            support request, and cannot be undone.
           </P>
         </Section>
 
