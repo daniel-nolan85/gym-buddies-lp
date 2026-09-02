@@ -113,8 +113,9 @@ export default function Download() {
               fontWeight: 300,
             }}
           >
-            Gym Buddies is coming soon to iOS and Android. Completely free,
-            forever. Join the waitlist and be the first to know when we launch.
+            Gym Buddies is live on iOS now, with Android coming soon. Completely
+            free, forever. Download today, or get notified the moment Android
+            launches.
           </p>
         </FadeIn>
 
@@ -129,15 +130,19 @@ export default function Download() {
             }}
           >
             {/* App Store */}
-            <motion.button
+            {/* App Store */}
+            <motion.a
+              href='https://apps.apple.com/us/app/gym-buddies-workout-social/id6788955105'
+              target='_blank'
+              rel='noopener noreferrer'
               whileHover={{ y: -3, boxShadow: '0 0 40px rgba(45,212,191,0.3)' }}
-              className='btn-primary disabled'
-              disabled
+              className='btn-primary'
               style={{
                 gap: '0.75rem',
                 padding: '1rem 2rem',
-                opacity: 0.5,
-                cursor: 'not-allowed',
+                textDecoration: 'none',
+                display: 'inline-flex',
+                alignItems: 'center',
               }}
             >
               <svg
@@ -152,7 +157,7 @@ export default function Download() {
                 <div
                   style={{ fontSize: '0.7rem', fontWeight: 400, lineHeight: 1 }}
                 >
-                  Coming soon to
+                  Download on the
                 </div>
                 <div
                   style={{ fontSize: '1rem', fontWeight: 700, lineHeight: 1.2 }}
@@ -160,7 +165,7 @@ export default function Download() {
                   App Store
                 </div>
               </div>
-            </motion.button>
+            </motion.a>
 
             {/* Google Play */}
             <motion.button
@@ -210,7 +215,7 @@ export default function Download() {
                   fontSize: '0.95rem',
                 }}
               >
-                You're on the list! We'll be in touch when we launch.
+                You're on the list! We'll email you the moment Android launches.
               </p>
             </div>
           ) : (
@@ -224,7 +229,7 @@ export default function Download() {
                   letterSpacing: '0.05em',
                 }}
               >
-                GET NOTIFIED AT LAUNCH
+                GET NOTIFIED WHEN ANDROID LAUNCHES
               </p>
               <div
                 style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}
@@ -289,7 +294,7 @@ export default function Download() {
                   marginTop: '0.75rem',
                 }}
               >
-                No spam, ever. Just a heads up when we launch. 🚀
+                No spam, ever. Just a heads up when Android launches. 🚀
               </p>
             </div>
           )}

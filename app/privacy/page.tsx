@@ -434,8 +434,6 @@ export default function PrivacyPolicy() {
               >
                 support@nolancode.com
               </a>
-              <br />
-              Henderson, Nevada, United States
             </p>
           </div>
         </Section>

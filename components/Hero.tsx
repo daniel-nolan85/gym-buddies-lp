@@ -255,7 +255,7 @@ export default function Hero() {
           <motion.div variants={container} initial='hidden' animate='show'>
             <motion.div variants={item} style={{ marginBottom: '1.5rem' }}>
               <span className='tag'>
-                🚀 Coming to iOS & Android — Free Forever
+                🚀 Now on iOS · Android coming soon — Free Forever
               </span>
             </motion.div>
 
@@ -311,14 +311,26 @@ export default function Hero() {
               }}
             >
               {/* App Store button */}
-              <button
-                className='btn-primary disabled'
-                disabled
-                style={{ gap: '0.75rem' }}
+              <motion.a
+                href='https://apps.apple.com/us/app/gym-buddies-workout-social/id6788955105'
+                target='_blank'
+                rel='noopener noreferrer'
+                whileHover={{
+                  y: -3,
+                  boxShadow: '0 0 40px rgba(45,212,191,0.3)',
+                }}
+                className='btn-primary'
+                style={{
+                  gap: '0.75rem',
+                  padding: '1rem 2rem',
+                  textDecoration: 'none',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                }}
               >
                 <svg
-                  width='20'
-                  height='20'
+                  width='22'
+                  height='22'
                   viewBox='0 0 24 24'
                   fill='currentColor'
                 >
@@ -327,17 +339,16 @@ export default function Hero() {
                 <div style={{ textAlign: 'left' }}>
                   <div
                     style={{
-                      fontSize: '0.65rem',
+                      fontSize: '0.7rem',
                       fontWeight: 400,
-                      opacity: 0.8,
                       lineHeight: 1,
                     }}
                   >
-                    Coming soon to
+                    Download on the
                   </div>
                   <div
                     style={{
-                      fontSize: '0.95rem',
+                      fontSize: '1rem',
                       fontWeight: 700,
                       lineHeight: 1.2,
                     }}
@@ -345,13 +356,19 @@ export default function Hero() {
                     App Store
                   </div>
                 </div>
-              </button>
+              </motion.a>
 
-              {/* Google Play button */}
-              <button
+              {/* Google Play — unchanged, still disabled */}
+              <motion.button
+                whileHover={{ y: -3 }}
                 className='btn-secondary disabled'
                 disabled
-                style={{ gap: '0.75rem', opacity: 0.4, cursor: 'not-allowed' }}
+                style={{
+                  gap: '0.75rem',
+                  padding: '1rem 2rem',
+                  opacity: 0.5,
+                  cursor: 'not-allowed',
+                }}
               >
                 <svg
                   width='20'
@@ -382,7 +399,7 @@ export default function Hero() {
                     Google Play
                   </div>
                 </div>
-              </button>
+              </motion.button>
             </motion.div>
 
             {/* Social proof */}
@@ -395,30 +412,27 @@ export default function Hero() {
                 flexWrap: 'wrap',
               }}
             >
-              <div style={{ display: 'flex' }}>
-                {['#2DD4BF', '#6D4FC2', '#22D3EE', '#A78BFA', '#5EEAD4'].map(
-                  (color, i) => (
-                    <div
-                      key={i}
-                      style={{
-                        width: 32,
-                        height: 32,
-                        borderRadius: '50%',
-                        background: color,
-                        border: '2px solid var(--bg-primary)',
-                        marginLeft: i === 0 ? 0 : '-8px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        fontSize: '0.65rem',
-                        fontWeight: 700,
-                        color: '#08060F',
-                      }}
-                    >
-                      {['A', 'J', 'S', 'M', 'R'][i]}
-                    </div>
-                  ),
-                )}
+              <div
+                style={{
+                  width: 40,
+                  height: 40,
+                  borderRadius: '50%',
+                  background: 'rgba(45,212,191,0.15)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+              >
+                <svg
+                  width='18'
+                  height='18'
+                  viewBox='0 0 24 24'
+                  fill='none'
+                  stroke='#2DD4BF'
+                  strokeWidth='2.5'
+                >
+                  <polyline points='20 6 9 17 4 12' />
+                </svg>
               </div>
               <div>
                 <div
@@ -428,12 +442,12 @@ export default function Hero() {
                     color: 'var(--text-primary)',
                   }}
                 >
-                  Beta testers waiting
+                  Now live on the App Store
                 </div>
                 <div
                   style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}
                 >
-                  Be the first to train together
+                  Free forever · no ads, no paywalls
                 </div>
               </div>
             </motion.div>

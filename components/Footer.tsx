@@ -103,7 +103,7 @@ export default function Footer() {
               fontFamily: 'var(--font-mono)',
             }}
           >
-            Made with 💪 in Henderson, Nevada
+            Made with 💪 for people who show up
           </p>
         </div>
       </div>

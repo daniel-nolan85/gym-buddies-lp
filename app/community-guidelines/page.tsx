@@ -268,8 +268,6 @@ export default function CommunityGuidelines() {
               >
                 support@nolancode.com
               </a>
-              <br />
-              Henderson, Nevada, United States
             </p>
           </div>
         </Section>
