@@ -4,192 +4,6 @@ import { motion } from 'framer-motion';
 
 const BASE = '';
 
-// Mini social feed mockup screen content
-function FeedScreen() {
-  const posts = [
-    {
-      name: 'Alex K.',
-      time: '2m',
-      content: 'Just crushed leg day 🔥 New PR on squats!',
-      emoji: '💪',
-      reactions: 14,
-    },
-    {
-      name: 'Sarah M.',
-      time: '8m',
-      content: 'Week 3 of my AI plan done. Already seeing results!',
-      emoji: '⚡',
-      reactions: 28,
-    },
-    {
-      name: 'Jordan T.',
-      time: '15m',
-      content: 'Morning run complete. 5K in 24mins 🏃',
-      emoji: '🔥',
-      reactions: 9,
-    },
-  ];
-
-  return (
-    <div
-      style={{
-        height: '100%',
-        background: '#0E0B1A',
-        overflowY: 'hidden',
-        padding: '8px 0',
-      }}
-    >
-      {/* Header */}
-      <div
-        style={{
-          padding: '8px 12px 6px',
-          borderBottom: '1px solid rgba(255,255,255,0.06)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-        }}
-      >
-        <span
-          style={{
-            fontFamily: 'var(--font-display)',
-            fontWeight: 700,
-            fontSize: '0.85rem',
-            color: 'var(--teal)',
-          }}
-        >
-          Feed
-        </span>
-        <div
-          style={{
-            width: 24,
-            height: 24,
-            borderRadius: '50%',
-            background:
-              'linear-gradient(135deg, var(--teal), var(--purple-light))',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            fontSize: '0.6rem',
-            color: '#fff',
-            fontWeight: 700,
-          }}
-        >
-          D
-        </div>
-      </div>
-
-      {/* Posts */}
-      {posts.map((post, i) => (
-        <div
-          key={i}
-          style={{
-            padding: '10px 12px',
-            borderBottom: '1px solid rgba(255,255,255,0.04)',
-          }}
-        >
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '6px',
-              marginBottom: '6px',
-            }}
-          >
-            <div
-              style={{
-                width: 26,
-                height: 26,
-                borderRadius: '50%',
-                background: `linear-gradient(135deg, hsl(${i * 60 + 160}, 70%, 40%), hsl(${i * 60 + 200}, 80%, 30%))`,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '0.55rem',
-                color: '#fff',
-                fontWeight: 700,
-                flexShrink: 0,
-              }}
-            >
-              {post.name[0]}
-            </div>
-            <div>
-              <div
-                style={{
-                  fontSize: '0.65rem',
-                  fontWeight: 600,
-                  color: 'var(--text-primary)',
-                }}
-              >
-                {post.name}
-              </div>
-              <div style={{ fontSize: '0.55rem', color: 'var(--text-muted)' }}>
-                {post.time} ago
-              </div>
-            </div>
-          </div>
-          <p
-            style={{
-              fontSize: '0.65rem',
-              color: 'var(--text-secondary)',
-              lineHeight: 1.5,
-              marginBottom: '6px',
-            }}
-          >
-            {post.content}
-          </p>
-          <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-            <span
-              style={{
-                fontSize: '0.6rem',
-                background: 'rgba(45,212,191,0.1)',
-                border: '1px solid rgba(45,212,191,0.2)',
-                borderRadius: '99px',
-                padding: '2px 6px',
-                color: 'var(--teal)',
-              }}
-            >
-              {post.emoji} {post.reactions}
-            </span>
-            <span style={{ fontSize: '0.55rem', color: 'var(--text-muted)' }}>
-              💬 Reply
-            </span>
-          </div>
-        </div>
-      ))}
-
-      {/* Bottom nav bar */}
-      <div
-        style={{
-          position: 'absolute',
-          bottom: 0,
-          left: 0,
-          right: 0,
-          height: '44px',
-          background: 'rgba(14,11,26,0.95)',
-          borderTop: '1px solid rgba(255,255,255,0.06)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-around',
-          padding: '0 8px',
-        }}
-      >
-        {['🏠', '🔍', '➕', '💬', '👤'].map((icon, i) => (
-          <div
-            key={i}
-            style={{
-              fontSize: i === 0 ? '1rem' : '0.8rem',
-              opacity: i === 0 ? 1 : 0.4,
-              filter: i === 0 ? 'none' : 'grayscale(1)',
-            }}
-          >
-            {icon}
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
 export default function Hero() {
   const container = {
     hidden: {},
@@ -496,7 +310,17 @@ export default function Hero() {
               >
                 <div className='phone-notch' />
                 <div className='phone-screen' style={{ top: '30px' }}>
-                  <FeedScreen />
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={`${BASE}/img/screens/feed.webp`}
+                    alt='Gym Buddies social feed with workout posts and reactions'
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      objectPosition: 'top',
+                    }}
+                  />
                 </div>
               </div>
 
@@ -516,6 +340,7 @@ export default function Hero() {
                   right: '-80px',
                   padding: '0.6rem 0.9rem',
                   borderRadius: '12px',
+                  background: 'rgba(14,11,26,0.92)',
                   borderColor: 'rgba(45,212,191,0.2)',
                   whiteSpace: 'nowrap',
                   zIndex: 2,
@@ -557,6 +382,7 @@ export default function Hero() {
                   left: '-90px',
                   padding: '0.6rem 0.9rem',
                   borderRadius: '12px',
+                  background: 'rgba(14,11,26,0.92)',
                   borderColor: 'rgba(109,79,194,0.3)',
                   whiteSpace: 'nowrap',
                   zIndex: 2,

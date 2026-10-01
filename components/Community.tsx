@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import FadeIn from './FadeIn';
 
 const stats = [
-  { value: 'Day 1', label: 'Community launching soon', emoji: '🚀' },
+  { value: 'Live', label: 'Now on iOS & Android', emoji: '🚀' },
   { value: 'All', label: 'Free features for all users', emoji: '🎁' },
   { value: '8', label: 'Core features built', emoji: '⚡' },
   { value: '100%', label: 'Community driven', emoji: '👥' },
