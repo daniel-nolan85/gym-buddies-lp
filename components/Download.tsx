@@ -2,36 +2,10 @@
 
 import { motion } from 'framer-motion';
 import FadeIn from './FadeIn';
-import { useState } from 'react';
 
 const BASE = '';
 
 export default function Download() {
-  const [email, setEmail] = useState('');
-  const [waitlistStatus, setWaitlistStatus] = useState<
-    'idle' | 'sending' | 'done' | 'error'
-  >('idle');
-
-  const handleWaitlist = async () => {
-    if (!email) return;
-    setWaitlistStatus('sending');
-    try {
-      const res = await fetch(
-        'https://gym-buddies-e61la.sevalla.app/api/email/waitlist',
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email }),
-        },
-      );
-      if (!res.ok) throw new Error('Failed');
-      setWaitlistStatus('done');
-      setEmail('');
-    } catch {
-      setWaitlistStatus('error');
-    }
-  };
-
   return (
     <section
       id='download'
@@ -113,9 +87,8 @@ export default function Download() {
               fontWeight: 300,
             }}
           >
-            Gym Buddies is live on iOS now, with Android coming soon. Completely
-            free, forever. Download today, or get notified the moment Android
-            launches.
+            Gym Buddies is live on iOS and Android. Completely free, forever.
+            Download today and start training with your friends.
           </p>
         </FadeIn>
 
@@ -129,7 +102,6 @@ export default function Download() {
               marginBottom: '3rem',
             }}
           >
-            {/* App Store */}
             {/* App Store */}
             <motion.a
               href='https://apps.apple.com/us/app/gym-buddies-workout-social/id6788955105'
@@ -168,15 +140,18 @@ export default function Download() {
             </motion.a>
 
             {/* Google Play */}
-            <motion.button
-              whileHover={{ y: -3 }}
-              className='btn-secondary disabled'
-              disabled
+            <motion.a
+              href='https://play.google.com/store/apps/details?id=com.nolancode.gymbuddies'
+              target='_blank'
+              rel='noopener noreferrer'
+              whileHover={{ y: -3, boxShadow: '0 0 40px rgba(45,212,191,0.3)' }}
+              className='btn-primary'
               style={{
                 gap: '0.75rem',
                 padding: '1rem 2rem',
-                opacity: 0.5,
-                cursor: 'not-allowed',
+                textDecoration: 'none',
+                display: 'inline-flex',
+                alignItems: 'center',
               }}
             >
               <svg
@@ -185,13 +160,13 @@ export default function Download() {
                 viewBox='0 0 24 24'
                 fill='currentColor'
               >
-                <path d='M3.18 23.76c.3.17.64.24.99.18L14.76 12 10.23 7.47 3.18 23.76zm17.14-10.93L17.5 11.3l-2.74 2.7 2.74 2.7 2.84-1.55c.81-.45.81-1.57-.02-2.02zM3.54.28C3.24.1 2.9.03 2.55.1L13.38 11 8.84 15.54 3.54.28zM14.76 12l2.74-2.7-2.74-2.7L3.18.24c-.3-.17-.64-.24-.99-.18L14.76 12z' />
+                <path d='M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z' />
               </svg>
               <div style={{ textAlign: 'left' }}>
                 <div
                   style={{ fontSize: '0.7rem', fontWeight: 400, lineHeight: 1 }}
                 >
-                  Coming soon to
+                  Get it on
                 </div>
                 <div
                   style={{ fontSize: '1rem', fontWeight: 700, lineHeight: 1.2 }}
@@ -199,106 +174,10 @@ export default function Download() {
                   Google Play
                 </div>
               </div>
-            </motion.button>
+            </motion.a>
           </div>
         </FadeIn>
 
-        {/* Waitlist form */}
-        <FadeIn delay={200}>
-          {waitlistStatus === 'done' ? (
-            <div style={{ textAlign: 'center', padding: '1rem 0' }}>
-              <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🎉</div>
-              <p
-                style={{
-                  color: 'var(--teal)',
-                  fontWeight: 600,
-                  fontSize: '0.95rem',
-                }}
-              >
-                You're on the list! We'll email you the moment Android launches.
-              </p>
-            </div>
-          ) : (
-            <div style={{ maxWidth: '480px', margin: '0 auto' }}>
-              <p
-                style={{
-                  fontSize: '0.85rem',
-                  color: 'var(--text-muted)',
-                  marginBottom: '1rem',
-                  fontFamily: 'var(--font-mono)',
-                  letterSpacing: '0.05em',
-                }}
-              >
-                GET NOTIFIED WHEN ANDROID LAUNCHES
-              </p>
-              <div
-                style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}
-              >
-                <input
-                  type='email'
-                  placeholder='your@email.com'
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  style={{
-                    flex: 1,
-                    minWidth: '200px',
-                    background: 'rgba(255,255,255,0.04)',
-                    border: '1px solid rgba(255,255,255,0.1)',
-                    borderRadius: '12px',
-                    padding: '0.875rem 1.25rem',
-                    color: 'var(--text-primary)',
-                    fontSize: '0.9rem',
-                    outline: 'none',
-                    fontFamily: 'var(--font-body)',
-                    transition: 'border-color 0.2s',
-                  }}
-                  onFocus={(e) =>
-                    (e.currentTarget.style.borderColor = 'var(--teal)')
-                  }
-                  onBlur={(e) =>
-                    (e.currentTarget.style.borderColor =
-                      'rgba(255,255,255,0.1)')
-                  }
-                />
-                <motion.button
-                  whileHover={{
-                    y: -2,
-                    boxShadow: '0 0 20px rgba(45,212,191,0.3)',
-                  }}
-                  className='btn-primary'
-                  onClick={handleWaitlist}
-                  disabled={waitlistStatus === 'sending' || !email}
-                  style={{
-                    flexShrink: 0,
-                    opacity: waitlistStatus === 'sending' ? 0.7 : 1,
-                  }}
-                >
-                  {waitlistStatus === 'sending' ? 'Joining...' : 'Notify me'}
-                </motion.button>
-              </div>
-              {waitlistStatus === 'error' && (
-                <p
-                  style={{
-                    color: '#F87171',
-                    fontSize: '0.8rem',
-                    marginTop: '0.75rem',
-                  }}
-                >
-                  Something went wrong. Please try again.
-                </p>
-              )}
-              <p
-                style={{
-                  fontSize: '0.75rem',
-                  color: 'var(--text-muted)',
-                  marginTop: '0.75rem',
-                }}
-              >
-                No spam, ever. Just a heads up when Android launches. 🚀
-              </p>
-            </div>
-          )}
-        </FadeIn>
       </div>
     </section>
   );

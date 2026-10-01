@@ -255,7 +255,7 @@ export default function Hero() {
           <motion.div variants={container} initial='hidden' animate='show'>
             <motion.div variants={item} style={{ marginBottom: '1.5rem' }}>
               <span className='tag'>
-                🚀 Now on iOS · Android coming soon — Free Forever
+                🚀 Now on iOS & Android — Free Forever
               </span>
             </motion.div>
 
@@ -358,40 +358,45 @@ export default function Hero() {
                 </div>
               </motion.a>
 
-              {/* Google Play — unchanged, still disabled */}
-              <motion.button
-                whileHover={{ y: -3 }}
-                className='btn-secondary disabled'
-                disabled
+              {/* Google Play button */}
+              <motion.a
+                href='https://play.google.com/store/apps/details?id=com.nolancode.gymbuddies'
+                target='_blank'
+                rel='noopener noreferrer'
+                whileHover={{
+                  y: -3,
+                  boxShadow: '0 0 40px rgba(45,212,191,0.3)',
+                }}
+                className='btn-primary'
                 style={{
                   gap: '0.75rem',
                   padding: '1rem 2rem',
-                  opacity: 0.5,
-                  cursor: 'not-allowed',
+                  textDecoration: 'none',
+                  display: 'inline-flex',
+                  alignItems: 'center',
                 }}
               >
                 <svg
-                  width='20'
-                  height='20'
+                  width='22'
+                  height='22'
                   viewBox='0 0 24 24'
                   fill='currentColor'
                 >
-                  <path d='M3.18 23.76c.3.17.64.24.99.18L14.76 12 10.23 7.47 3.18 23.76zm17.14-10.93L17.5 11.3l-2.74 2.7 2.74 2.7 2.84-1.55c.81-.45.81-1.57-.02-2.02zM3.54.28C3.24.1 2.9.03 2.55.1L13.38 11 8.84 15.54 3.54.28zM14.76 12l2.74-2.7-2.74-2.7L3.18.24c-.3-.17-.64-.24-.99-.18L14.76 12z' />
+                  <path d='M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z' />
                 </svg>
                 <div style={{ textAlign: 'left' }}>
                   <div
                     style={{
-                      fontSize: '0.65rem',
+                      fontSize: '0.7rem',
                       fontWeight: 400,
-                      opacity: 0.8,
                       lineHeight: 1,
                     }}
                   >
-                    Coming soon to
+                    Get it on
                   </div>
                   <div
                     style={{
-                      fontSize: '0.95rem',
+                      fontSize: '1rem',
                       fontWeight: 700,
                       lineHeight: 1.2,
                     }}
@@ -399,7 +404,7 @@ export default function Hero() {
                     Google Play
                   </div>
                 </div>
-              </motion.button>
+              </motion.a>
             </motion.div>
 
             {/* Social proof */}
@@ -442,7 +447,7 @@ export default function Hero() {
                     color: 'var(--text-primary)',
                   }}
                 >
-                  Now live on the App Store
+                  Now live on the App Store & Google Play
                 </div>
                 <div
                   style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}
