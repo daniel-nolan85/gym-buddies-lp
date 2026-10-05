@@ -69,7 +69,7 @@ export default function Hero() {
           <motion.div variants={container} initial='hidden' animate='show'>
             <motion.div variants={item} style={{ marginBottom: '1.5rem' }}>
               <span className='tag'>
-                🚀 Now on iOS & Android — Free Forever
+                🚀 Now on iOS & Android - Free Forever
               </span>
             </motion.div>
 
@@ -112,7 +112,7 @@ export default function Hero() {
             >
               The social fitness platform that keeps you accountable, connected,
               and progressing. Track workouts, follow friends, get AI-powered
-              plans, and level up together — completely free.
+              plans, and level up together - completely free.
             </motion.p>
 
             <motion.div

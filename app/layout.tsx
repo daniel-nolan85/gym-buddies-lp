@@ -4,7 +4,7 @@ import './globals.css';
 const BASE = '';
 
 export const metadata: Metadata = {
-  title: 'Gym Buddies — Train Together. Grow Stronger.',
+  title: 'Gym Buddies - Train Together. Grow Stronger.',
   description:
     'Gym Buddies is a free social fitness app for iOS and Android. Track workouts, connect with friends, follow AI-generated plans, and earn achievements together.',
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Nolancode' }],
   openGraph: {
-    title: 'Gym Buddies — Train Together. Grow Stronger.',
+    title: 'Gym Buddies - Train Together. Grow Stronger.',
     description:
       'A free social fitness platform for iOS and Android. Track, connect, and grow stronger together.',
     type: 'website',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Gym Buddies — Train Together. Grow Stronger.',
+    title: 'Gym Buddies - Train Together. Grow Stronger.',
     description: 'A free social fitness platform for iOS and Android.',
   },
   icons: {

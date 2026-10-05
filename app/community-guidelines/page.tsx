@@ -2,7 +2,7 @@ import LegalNav from '@/components/LegalNav';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Community Guidelines — Gym Buddies',
+  title: 'Community Guidelines - Gym Buddies',
   description: 'Community Guidelines for the Gym Buddies mobile application.',
 };
 
@@ -129,7 +129,7 @@ export default function CommunityGuidelines() {
           <UL
             items={[
               'Treat every member with kindness and respect, regardless of their fitness level, appearance, background, or goals',
-              'Offer constructive and supportive feedback — not criticism or ridicule',
+              'Offer constructive and supportive feedback - not criticism or ridicule',
               'Celebrate the achievements of others, no matter how big or small',
               'Avoid language or behaviour that is demeaning, condescending, or dismissive',
             ]}
@@ -200,7 +200,7 @@ export default function CommunityGuidelines() {
           <UL
             items={[
               'Verified Coach status does not mean the coach is medically licensed or that their advice is clinically endorsed by Gym Buddies',
-              'All fitness and nutrition advice — from any source — should be followed with appropriate caution and professional consultation where necessary',
+              'All fitness and nutrition advice - from any source - should be followed with appropriate caution and professional consultation where necessary',
               'Verified Coaches are held to the same community standards as all other members and may have their status revoked for guideline violations',
             ]}
           />

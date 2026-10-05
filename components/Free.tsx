@@ -176,7 +176,7 @@ export default function Free() {
                 }}
               >
                 We're building Gym Buddies because we love fitness and
-                community. Every feature you see is included at no cost —
+                community. Every feature you see is included at no cost -
                 download it, use it, share it with your training partners.
               </p>
             </div>

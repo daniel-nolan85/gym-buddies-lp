@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import LegalNav from '@/components/LegalNav';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy — Gym Buddies',
+  title: 'Privacy Policy - Gym Buddies',
   description: 'Privacy Policy for the Gym Buddies mobile application.',
 };
 
@@ -158,7 +158,7 @@ export default function PrivacyPolicy() {
             When you record and send voice messages in chat, or leave voice
             comments on posts, plans, or profile images, the audio recording is
             captured, uploaded, and stored on Cloudinary's secure servers. Voice
-            recordings are user-initiated — the App only records when you
+            recordings are user-initiated - the App only records when you
             actively hold the record button. Recordings are stored as part of
             your content and are subject to the same retention and deletion
             rules as other media you upload. You can delete individual voice
@@ -208,7 +208,7 @@ export default function PrivacyPolicy() {
               'Provide, operate, and maintain the App and all its features',
               'Generate AI-powered workout and diet plans personalised to your goals and fitness level',
               'Enable social features including posts, comments, reactions, group chats, and buddy connections',
-              'Send push notifications about activity related to your account (reactions, messages, achievements, streak reminders) — you can manage these in your device settings',
+              'Send push notifications about activity related to your account (reactions, messages, achievements, streak reminders) - you can manage these in your device settings',
               'Track and display your workout history, personal records, streaks, and achievements',
               'Provide nutrition tracking and calorie/macro analysis',
               'Process and store media files (images and videos) you upload via Cloudinary',
@@ -229,15 +229,15 @@ export default function PrivacyPolicy() {
           </P>
           <UL
             items={[
-              'Clerk (clerk.com) — Authentication and user identity management. Clerk processes your email address and OAuth tokens. View their privacy policy at clerk.com/privacy',
-              'Cloudinary (cloudinary.com) — Cloud storage and delivery of images and videos you upload. View their privacy policy at cloudinary.com/privacy',
-              "MongoDB Atlas — Secure cloud database storage for your app data, hosted on MongoDB's infrastructure",
-              'Inngest (inngest.com) — Background job processing for features such as AI plan generation and notifications',
-              'Sevalla — Application hosting and infrastructure provider',
-              'Expo (expo.dev) — Mobile app framework and push notification delivery (via Expo Push Notification Service)',
-              'OpenAI (openai.com) — AI services used to generate personalised workout and diet plans, global and personal challenges, motivational content, and nutrition estimates. Your fitness preferences, goals, and food log queries are sent to OpenAI for processing; no personally identifiable information beyond these inputs is transmitted. View their privacy policy at openai.com/policies/privacy-policy',
-              'Sentry (sentry.io) — Error tracking and performance monitoring. Sentry may receive device information, IP addresses, and error context data when errors occur within the App. View their privacy policy at sentry.io/privacy',
-              'Resend (resend.com) — Transactional email delivery for system notifications and alerts. View their privacy policy at resend.com/privacy',
+              'Clerk (clerk.com) - Authentication and user identity management. Clerk processes your email address and OAuth tokens. View their privacy policy at clerk.com/privacy',
+              'Cloudinary (cloudinary.com) - Cloud storage and delivery of images and videos you upload. View their privacy policy at cloudinary.com/privacy',
+              "MongoDB Atlas - Secure cloud database storage for your app data, hosted on MongoDB's infrastructure",
+              'Inngest (inngest.com) - Background job processing for features such as AI plan generation and notifications',
+              'Sevalla - Application hosting and infrastructure provider',
+              'Expo (expo.dev) - Mobile app framework and push notification delivery (via Expo Push Notification Service)',
+              'OpenAI (openai.com) - AI services used to generate personalised workout and diet plans, global and personal challenges, motivational content, and nutrition estimates. Your fitness preferences, goals, and food log queries are sent to OpenAI for processing; no personally identifiable information beyond these inputs is transmitted. View their privacy policy at openai.com/policies/privacy-policy',
+              'Sentry (sentry.io) - Error tracking and performance monitoring. Sentry may receive device information, IP addresses, and error context data when errors occur within the App. View their privacy policy at sentry.io/privacy',
+              'Resend (resend.com) - Transactional email delivery for system notifications and alerts. View their privacy policy at resend.com/privacy',
             ]}
           />
           <P>
@@ -343,7 +343,7 @@ export default function PrivacyPolicy() {
             other users while retaining your data so you can reactivate at any
             time. Delete Account Permanently immediately and irreversibly
             deletes your account, strips your personal information, and
-            anonymizes your existing content — this is self-service, requires no
+            anonymizes your existing content - this is self-service, requires no
             support request, and cannot be undone.
           </P>
         </Section>
@@ -357,7 +357,7 @@ export default function PrivacyPolicy() {
             items={[
               'The right to know what personal information we collect, use, disclose, and sell',
               'The right to delete personal information we have collected',
-              'The right to opt-out of the sale of personal information — we do not sell personal information',
+              'The right to opt-out of the sale of personal information - we do not sell personal information',
               'The right to non-discrimination for exercising your CCPA rights',
             ]}
           />

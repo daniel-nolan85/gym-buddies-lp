@@ -85,7 +85,7 @@ export default function Features() {
               <span className="gradient-text">Built for athletes.</span>
             </h2>
             <p style={{ color: 'var(--text-secondary)', maxWidth: '520px', margin: '0 auto', lineHeight: 1.7, fontSize: '0.975rem' }}>
-              Everything you need to train smarter, stay accountable, and build a fitness community — all in one free app.
+              Everything you need to train smarter, stay accountable, and build a fitness community - all in one free app.
             </p>
           </div>
         </FadeIn>
